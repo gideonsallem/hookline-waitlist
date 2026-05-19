@@ -11,12 +11,14 @@
   <meta property="og:description" content="Stop guessing. Start growing. The AI tool that generates scroll-stopping hooks and explains why they work.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hookline.app">
-  <meta property="og:image" content="https://hookline.app/og-image.png">
   
   <!-- Fonts: Syne + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tally Embed Script -->
+  <script src="https://tally.so/widgets/embed.js"></script>
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='90' font-size='90'>🎣</text></svg>">
@@ -221,47 +223,6 @@
       font-size: 0.95rem;
     }
     
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    label {
-      display: block;
-      font-weight: 500;
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.9);
-    }
-    
-    input[type="email"],
-    select {
-      width: 100%;
-      padding: 14px 16px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--glass-border);
-      border-radius: 10px;
-      color: white;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      transition: all 0.2s;
-    }
-    
-    input[type="email"]:focus,
-    select:focus {
-      outline: none;
-      border-color: var(--mid-purple);
-      background: rgba(255, 255, 255, 0.08);
-    }
-    
-    input[type="email"]::placeholder {
-      color: rgba(255, 255, 255, 0.4);
-    }
-    
-    select option {
-      background: var(--card-black);
-      color: white;
-    }
-    
     .btn-primary {
       width: 100%;
       padding: 16px 32px;
@@ -275,6 +236,8 @@
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
       margin-top: 8px;
+      text-decoration: none;
+      display: inline-block;
     }
     
     .btn-primary:hover {
@@ -287,50 +250,6 @@
       margin-top: 16px;
       font-size: 0.85rem;
       color: rgba(255, 255, 255, 0.5);
-    }
-    
-    .success-message {
-      display: none;
-      text-align: center;
-      padding: 40px;
-    }
-    
-    .success-message.show {
-      display: block;
-    }
-    
-    .success-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--success-green);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-      font-size: 2.5rem;
-    }
-    
-    .success-message h3 {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.75rem;
-      margin-bottom: 12px;
-    }
-    
-    .success-message p {
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 24px;
-    }
-    
-    .bonus-badge {
-      display: inline-block;
-      background: rgba(29, 158, 117, 0.2);
-      border: 1px solid var(--success-green);
-      padding: 12px 24px;
-      border-radius: 100px;
-      font-weight: 600;
-      color: var(--success-green);
     }
 
     /* Features Grid */
@@ -581,68 +500,28 @@
         <strong>why</strong> each piece of content will grow your audience.
       </p>
 
-      <!-- Waitlist Form -->
+      <!-- Waitlist Form Container -->
       <div class="waitlist-container" id="join">
         <div class="form-header">
           <h2>🎣 Join the Waitlist</h2>
           <p>Be first to access + get 200 free credits at launch</p>
         </div>
         
-        <form id="waitlist-form">
-          <div class="form-group">
-            <label for="email">Email address *</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              placeholder="you@creator.com" 
-              required
-            />
-          </div>
-          
-          <div class="form-group">
-            <label for="platform">Primary platform (optional)</label>
-            <select id="platform" name="platform">
-              <option value="">Select your platform</option>
-              <option value="tiktok">TikTok</option>
-              <option value="instagram">Instagram Reels</option>
-              <option value="youtube">YouTube Shorts</option>
-              <option value="twitter">X (Twitter)</option>
-              <option value="facebook">Facebook</option>
-              <option value="multiple">Multiple platforms</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="challenge">Biggest challenge (optional)</label>
-            <select id="challenge" name="challenge">
-              <option value="">What's holding you back?</option>
-              <option value="ideas">Coming up with ideas</option>
-              <option value="hooks">Writing engaging hooks</option>
-              <option value="consistency">Posting consistently</option>
-              <option value="growth">Growing my audience</option>
-              <option value="analytics">Understanding what works</option>
-            </select>
-          </div>
-          
-          <button type="submit" class="btn-primary">
-            Get Early Access →
-          </button>
-          
-          <p class="form-note">
-            🔒 We respect your privacy. No spam. Unsubscribe anytime.
-          </p>
-        </form>
-
-        <!-- Success Message -->
-        <div id="success-message" class="success-message">
-          <div class="success-icon">✓</div>
-          <h3>You're on the list!</h3>
-          <p>We'll notify you when Hookline launches. Check your inbox for a confirmation email.</p>
-          <div class="bonus-badge">
-            🎁 Bonus: 200 free credits reserved for you
-          </div>
-        </div>
+        <!-- Tally Form Button - Opens Popup -->
+        <button 
+          data-tally-open="Y5JeA0" 
+          data-tally-layout="modal" 
+          data-tally-theme-color="#6B21D4"
+          data-tally-emoji-text="🎣"
+          data-tally-emoji-animation="wave"
+          class="btn-primary"
+        >
+          Get Early Access →
+        </button>
+        
+        <p class="form-note">
+          🔒 We respect your privacy. No spam. Unsubscribe anytime.
+        </p>
       </div>
 
       <!-- Platform Badges -->
@@ -770,9 +649,15 @@
     <div class="container">
       <h2>Ready to create content<br/>that actually grows?</h2>
       <p>Join the waitlist now and get 200 free credits when we launch. No credit card required.</p>
-      <a href="#join" class="btn-primary" style="display: inline-block; text-decoration: none; max-width: 300px;">
+      <button 
+        data-tally-open="Y5JeA0" 
+        data-tally-layout="modal" 
+        data-tally-theme-color="#6B21D4"
+        class="btn-primary"
+        style="display: inline-block; text-decoration: none; max-width: 300px;"
+      >
         Join Waitlist — It's Free
-      </a>
+      </button>
     </div>
   </section>
 
@@ -789,65 +674,6 @@
   </footer>
 
   <script>
-    // Form submission handler
-    document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const email = document.getElementById('email').value;
-      const platform = document.getElementById('platform').value;
-      const challenge = document.getElementById('challenge').value;
-      
-      // Track event (if PostHog is set up)
-      if (typeof posthog !== 'undefined') {
-        posthog.capture('waitlist_submitted', { 
-          email, 
-          platform, 
-          challenge,
-          timestamp: new Date().toISOString()
-        });
-      }
-      
-      // Submit to Tally
-      try {
-        const response = await fetch('https://api.tally.so/forms/Y5JeA0/submissions', {
-          method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email: email,
-            platform: platform || 'Not specified',
-            challenge: challenge || 'Not specified'
-          })
-        });
-        
-        if (response.ok) {
-          // Show success message
-          document.getElementById('waitlist-form').style.display = 'none';
-          document.getElementById('success-message').classList.add('show');
-          
-          // Increment counter (visual only)
-          const counter = document.getElementById('waitlist-count');
-          const currentCount = parseInt(counter.textContent.replace(',', ''));
-          counter.textContent = (currentCount + 1).toLocaleString();
-          
-          // Store in localStorage to prevent duplicate submissions
-          localStorage.setItem('hookline_waitlist_submitted', 'true');
-        } else {
-          throw new Error('Submission failed');
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        alert('Oops! Something went wrong. Please try again or email hello@hookline.app');
-      }
-    });
-    
-    // Check if already submitted
-    if (localStorage.getItem('hookline_waitlist_submitted') === 'true') {
-      document.getElementById('waitlist-form').style.display = 'none';
-      document.getElementById('success-message').classList.add('show');
-    }
-    
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -858,14 +684,21 @@
         }
       });
     });
+    
+    // Tally popup callback - track when form is submitted
+    window.Tally = {
+      onSubmit: function(formId, submissionId) {
+        console.log('Form submitted:', formId, submissionId);
+        // You can add analytics tracking here
+        if (typeof posthog !== 'undefined') {
+          posthog.capture('waitlist_submitted', { 
+            formId: formId,
+            submissionId: submissionId,
+            timestamp: new Date().toISOString()
+          });
+        }
+      }
+    };
   </script>
-  
-  <!-- PostHog Analytics (optional - add your key later) -->
-  <!--
-  <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('YOUR_PROJECT_KEY', { api_host: 'https://app.posthog.com' });
-  </script>
-  -->
 </body>
 </html>
