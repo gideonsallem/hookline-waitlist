@@ -20,9 +20,10 @@
   <!-- Tally Embed Script -->
   <script src="https://tally.so/widgets/embed.js"></script>
   
-<!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="images/logo/logo-icon.svg">
-<link rel="apple-touch-icon" href="images/logo/logo-icon.svg">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo/logo-icon.png.png">
+  <link rel="apple-touch-icon" href="images/logo/logo-icon.png.png">
+
   <style>
     :root {
       /* Brand Colors */
@@ -117,12 +118,15 @@
     .logo-icon {
       width: 40px;
       height: 40px;
-      background: var(--gradient-primary);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+    }
+    
+    .logo-text {
+      height: 40px;
+      width: auto;
     }
     
     .nav-links {
@@ -149,14 +153,6 @@
       border-radius: 8px;
       font-weight: 600;
     }
-    .logo img {
-  display: block;
-}
-
-.logo-text {
-  height: 40px;
-  width: auto;
-}
 
     /* Hero Section */
     .hero {
@@ -260,6 +256,22 @@
       color: rgba(255, 255, 255, 0.5);
     }
 
+    /* Dashboard Preview */
+    .dashboard-preview {
+      margin-top: 60px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow-lg);
+      background: var(--card-black);
+    }
+    
+    .dashboard-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* Features Grid */
     .features {
       padding: 80px 0;
@@ -286,8 +298,8 @@
     
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
     }
     
     .feature-card {
@@ -326,6 +338,14 @@
     .feature-card p {
       color: rgba(255, 255, 255, 0.6);
       line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .feature-card img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--glass-border);
+      margin-top: 16px;
     }
 
     /* How It Works */
@@ -369,6 +389,45 @@
     
     .step p {
       color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Creators Section */
+    .creators-section {
+      padding: 80px 0;
+      background: rgba(107, 33, 212, 0.05);
+    }
+    
+    .creator-card {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      transition: transform 0.2s;
+    }
+    
+    .creator-card:hover {
+      transform: translateY(-4px);
+    }
+    
+    .creator-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .creator-card-content {
+      padding: 24px;
+      background: var(--glass-bg);
+    }
+    
+    .creator-card-content h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .creator-card-content p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.95rem;
     }
 
     /* Social Proof */
@@ -459,6 +518,10 @@
       .stats {
         gap: 32px;
       }
+      
+      .creator-grid {
+        grid-template-columns: 1fr !important;
+      }
     }
 
     /* Animations */
@@ -473,7 +536,7 @@
       }
     }
     
-    .hero, .feature-card, .step {
+    .hero, .feature-card, .step, .creator-card {
       animation: fadeInUp 0.6s ease-out;
     }
   </style>
@@ -485,10 +548,10 @@
   <!-- Navigation -->
   <nav>
     <div class="container nav-content">
-    <a href="#" class="logo">
-  <img src="images/logo/logo-icon.svg" alt="Hookline" width="40" height="40">
-  <img src="images/logo/logo-full.svg" alt="Hookline" class="logo-text" height="40">
-</a>
+      <a href="#" class="logo">
+        <img src="images/logo/logo-icon.png.png" alt="Hookline" class="logo-icon" width="40" height="40">
+        <img src="images/logo/logo-full.svg.svg" alt="Hookline" class="logo-text" height="40">
+      </a>
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#how-it-works">How It Works</a>
@@ -501,7 +564,6 @@
   <section class="hero">
     <div class="container">
       <div class="badge">Early access launching Q1 2026</div>
-      
       <h1>Hook them.<br/>Grow them.<br/>Own your audience.</h1>
       <p class="subtitle">
         Stop guessing what works. Hookline generates scroll-stopping hooks, 
@@ -540,14 +602,13 @@
         <span style="background: var(--glass-bg); padding: 8px 16px; border-radius: 100px; font-size: 0.875rem; border: 1px solid var(--glass-border);">▶️ YouTube</span>
         <span style="background: var(--glass-bg); padding: 8px 16px; border-radius: 100px; font-size: 0.875rem; border: 1px solid var(--glass-border);">🔁 Facebook</span>
       </div>
+
+      <!-- Dashboard Preview -->
+      <div class="dashboard-preview">
+        <img src="images/dashboard-preview.png.png" alt="Hookline Dashboard Preview">
+      </div>
     </div>
   </section>
-  <!-- Dashboard Preview -->
-<div style="margin-top: 60px; border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow-lg);">
-  <img src="images/ui-screenshots/dashboard-preview.png" 
-       alt="Hookline Dashboard Preview" 
-       style="width: 100%; height: auto; display: block; background: var(--card-black);">
-</div>
 
   <!-- Features Section -->
   <section class="features" id="features">
@@ -558,88 +619,65 @@
       </div>
       
       <div class="features-grid">
-      <div class="feature-card">
-  <div class="feature-icon">🪝</div>
-  <h3>Hook Generator</h3>
-  <p>Generate scroll-stopping hooks tailored to your niche. Each hook comes with a "Why It Works" explanation.</p>
-  <img src="images/ui-screenshots/hook-generator.png" 
-       alt="Hook Generator" 
-       style="width: 100%; margin-top: 20px; border-radius: 10px; border: 1px solid var(--glass-border);">
-</div>
+        <div class="feature-card">
+          <div class="feature-icon">🪝</div>
+          <h3>Hook Generator</h3>
+          <p>Generate scroll-stopping hooks tailored to your niche. Each hook comes with a "Why It Works" explanation so you learn the psychology behind viral content.</p>
+          <img src="images/hook-generator.png.png" alt="Hook Generator Interface">
+        </div>
         
         <div class="feature-card">
           <div class="feature-icon">📜</div>
           <h3>Script Generator</h3>
           <p>Turn your ideas into complete video scripts with natural flow, perfect pacing, and built-in engagement triggers that keep viewers watching.</p>
+          <img src="images/script-generator.png.png" alt="Script Generator Interface">
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">✍️</div>
           <h3>Caption Writer</h3>
           <p>Platform-optimized captions that drive comments, shares, and saves. AI suggests CTAs that actually convert viewers into followers.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">🧠</div>
-          <h3>Why It Works Panel</h3>
-          <p>Every generation includes psychology-backed explanations. Learn pattern interrupt, curiosity gaps, social proof — and when to use each.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">♻️</div>
-          <h3>Repurpose Engine</h3>
-          <p>Turn one piece of content into 10+ variations. Adapt hooks, scripts, and captions for TikTok, Reels, Shorts, and X automatically.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">📈</div>
-          <h3>Growth Analytics</h3>
-          <p>Track which hooks perform best, understand your audience's preferences, and get AI recommendations for your next viral post.</p>
+          <img src="images/analytics-view.png.png" alt="Analytics and Growth Tracking">
         </div>
       </div>
     </div>
   </section>
+
   <!-- Creators Section -->
-<section class="creators-section" style="padding: 80px 0; background: rgba(107, 33, 212, 0.05);">
-  <div class="container">
-    <div class="section-header">
-      <h2>Built for creators, by creators</h2>
-      <p>Join thousands of creators who are done guessing and started growing.</p>
-    </div>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 60px;">
-      <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border);">
-        <img src="images/creators/creator-filming.jpg" 
-             alt="Creator filming content" 
-             style="width: 100%; height: auto; display: block;">
-        <div style="padding: 24px; background: var(--glass-bg);">
-          <h3 style="font-family: var(--font-display); margin-bottom: 8px;">Film with confidence</h3>
-          <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Know exactly what to say before you hit record.</p>
-        </div>
+  <section class="creators-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Built for creators, by creators</h2>
+        <p>Join thousands of creators who are done guessing and started growing.</p>
       </div>
       
-      <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border);">
-        <img src="images/creators/creator-editing.jpg" 
-             alt="Creator editing content" 
-             style="width: 100%; height: auto; display: block;">
-        <div style="padding: 24px; background: var(--glass-bg);">
-          <h3 style="font-family: var(--font-display); margin-bottom: 8px;">Create faster</h3>
-          <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Generate hooks, scripts, and captions in seconds.</p>
+      <div class="creator-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 60px;">
+        <div class="creator-card">
+          <img src="images/creator-editing.jpg" alt="Creator editing content on laptop">
+          <div class="creator-card-content">
+            <h3>Create faster</h3>
+            <p>Generate hooks, scripts, and captions in seconds — not hours.</p>
+          </div>
         </div>
-      </div>
-      
-      <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border);">
-        <img src="images/creators/creator-success.jpg" 
-             alt="Creator celebrating growth" 
-             style="width: 100%; height: auto; display: block;">
-        <div style="padding: 24px; background: var(--glass-bg);">
-          <h3 style="font-family: var(--font-display); margin-bottom: 8px;">Grow consistently</h3>
-          <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Post content that actually converts viewers to followers.</p>
+        
+        <div class="creator-card">
+          <img src="images/creator-editing.jpg" alt="Creator filming content">
+          <div class="creator-card-content">
+            <h3>Film with confidence</h3>
+            <p>Know exactly what to say before you hit record.</p>
+          </div>
+        </div>
+        
+        <div class="creator-card">
+          <img src="images/creator-editing.jpg" alt="Creator celebrating growth">
+          <div class="creator-card-content">
+            <h3>Grow consistently</h3>
+            <p>Post content that actually converts viewers to followers.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- How It Works -->
   <section class="how-it-works" id="how-it-works">
@@ -699,7 +737,6 @@
       </p>
       <p style="color: rgba(255,255,255,0.8); font-weight: 600; margin-top: 8px;">
         — Early access member
-      
       </p>
     </div>
   </section>
