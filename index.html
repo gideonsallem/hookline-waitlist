@@ -21,8 +21,8 @@
   <script src="https://tally.so/widgets/embed.js"></script>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./logo-icon.png">
-  <link rel="apple-touch-icon" href="./logo-icon.png">
+  <link rel="icon" type="image/png" href="images/logo/logo-icon.png">
+  <link rel="apple-touch-icon" href="images/logo/logo-icon.png">
 
   <style>
     :root {
@@ -119,6 +119,9 @@
       width: 40px;
       height: 40px;
       border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     .logo-text {
@@ -546,9 +549,8 @@
   <nav>
     <div class="container nav-content">
       <a href="#" class="logo">
-        <img src="./logo-icon.png" alt="Hookline" class="logo-icon" width="40" height="40" onerror="this.style.display='none'">
-        <img src="./logo-full.svg" alt="Hookline" class="logo-text" height="40" onerror="this.style.display='none'">
-        <span style="display:none" id="logo-fallback">🎣 Hookline</span>
+        <img src="images/logo/logo-icon.png.png" alt="Hookline" class="logo-icon" width="40" height="40">
+        <img src="images/logo/logo-full.svg.svg" alt="Hookline" class="logo-text" height="40">
       </a>
       <div class="nav-links">
         <a href="#features">Features</a>
@@ -603,7 +605,7 @@
 
       <!-- Dashboard Preview -->
       <div class="dashboard-preview">
-        <img src="./dashboard-preview.png" alt="Hookline Dashboard Preview" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect fill=%22%230F0020%22 width=%221200%22 height=%22675%22/%3E%3Ctext fill=%22%23C084FC%22 font-family=%22sans-serif%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EDashboard Preview Image%3C/text%3E%3C/svg%3E'">
+        <img src="images/dashboard-preview.png" alt="Hookline Dashboard Preview">
       </div>
     </div>
   </section>
@@ -621,21 +623,21 @@
           <div class="feature-icon">🪝</div>
           <h3>Hook Generator</h3>
           <p>Generate scroll-stopping hooks tailored to your niche. Each hook comes with a "Why It Works" explanation so you learn the psychology behind viral content.</p>
-          <img src="./hook-generator.png" alt="Hook Generator Interface" onerror="this.style.display='none'">
+          <img src="images/hook-generator.png" alt="Hook Generator Interface">
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">📜</div>
           <h3>Script Generator</h3>
           <p>Turn your ideas into complete video scripts with natural flow, perfect pacing, and built-in engagement triggers that keep viewers watching.</p>
-          <img src="./script-generator.png" alt="Script Generator Interface" onerror="this.style.display='none'">
+          <img src="images/script-generator.png" alt="Script Generator Interface">
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">✍️</div>
           <h3>Caption Writer</h3>
           <p>Platform-optimized captions that drive comments, shares, and saves. AI suggests CTAs that actually convert viewers into followers.</p>
-          <img src="./analytics-view.png" alt="Analytics and Growth Tracking" onerror="this.style.display='none'">
+          <img src="images/analytics-view.png" alt="Analytics and Growth Tracking">
         </div>
       </div>
     </div>
@@ -651,7 +653,7 @@
       
       <div class="creator-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 60px;">
         <div class="creator-card">
-          <img src="./creator-editing.jpg" alt="Creator editing content on laptop" onerror="this.style.display='none'">
+          <img src="images/creator-editing.jpg" alt="Creator editing content on laptop">
           <div class="creator-card-content">
             <h3>Create faster</h3>
             <p>Generate hooks, scripts, and captions in seconds — not hours.</p>
@@ -659,7 +661,7 @@
         </div>
         
         <div class="creator-card">
-          <img src="./creator-editing.jpg" alt="Creator filming content" onerror="this.style.display='none'">
+          <img src="images/creator-editing.jpg" alt="Creator filming content">
           <div class="creator-card-content">
             <h3>Film with confidence</h3>
             <p>Know exactly what to say before you hit record.</p>
@@ -667,7 +669,7 @@
         </div>
         
         <div class="creator-card">
-          <img src="./creator-editing.jpg" alt="Creator celebrating growth" onerror="this.style.display='none'">
+          <img src="images/creator-editing.jpg" alt="Creator celebrating growth">
           <div class="creator-card-content">
             <h3>Grow consistently</h3>
             <p>Post content that actually converts viewers to followers.</p>
@@ -794,17 +796,6 @@
         }
       }
     };
-    
-    // Show fallback logo if images fail
-    window.addEventListener('load', function() {
-      const logoIcon = document.querySelector('.logo-icon');
-      const logoText = document.querySelector('.logo-text');
-      const logoFallback = document.getElementById('logo-fallback');
-      
-      if (logoIcon.style.display === 'none' && logoText.style.display === 'none') {
-        logoFallback.style.display = 'inline';
-      }
-    });
   </script>
 </body>
 </html>
